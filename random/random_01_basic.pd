@@ -1,0 +1,11 @@
+#N canvas 100 80 760 560 12;
+#X text 30 15 1. [random] の基本 ── バンを押すと 0 〜 N-1 の整数が出る;
+#X obj 50 60 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144 -1 -1;
+#X obj 50 120 random 10;
+#X floatatom 50 170 5 0 0 0 - - - 0;
+#X floatatom 200 70 5 0 0 0 - - - 0;
+#X text 260 70 ← 右インレット: 範囲をあとから変える;
+#X text 150 170 ← [random 10] は 1〜10 ではなく 0〜9;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 1;
