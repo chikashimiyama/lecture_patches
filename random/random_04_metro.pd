@@ -1,5 +1,4 @@
 #N canvas 100 80 760 560 12;
-#X text 30 15 4. [metro] で自動演奏にする;
 #X obj 50 60 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 50 100 metro 250;
 #X obj 50 140 random 24;
@@ -8,15 +7,13 @@
 #X obj 50 260 osc~;
 #X obj 50 300 *~ 0.1;
 #X obj 50 340 dac~;
-#X text 150 100 ← 250ms ごと (1秒に4回) バンを出す;
 #X msg 400 60 \; pd dsp 1;
 #X msg 490 60 \; pd dsp 0;
-#X text 400 90 DSP オン / オフ;
+#X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 7 0 8 1;
+#X connect 6 0 7 1;
